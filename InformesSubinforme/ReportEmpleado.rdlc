@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Tablix Name="Tablix">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>18.52175cm</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>6.47676cm</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="Rectangle2">
+                      <ReportItems>
+                        <Textbox Name="comercial">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Comercial: </Value>
+                                  <Style>
+                                    <FontSize>16pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>=Fields!comercial.Value</Value>
+                                  <Style>
+                                    <FontSize>16pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>  --  </Value>
+                                  <Style>
+                                    <FontSize>16pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>=Fields!nombre.Value</Value>
+                                  <Style>
+                                    <FontSize>16pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value xml:space="preserve">  </Value>
+                                  <Style>
+                                    <FontSize>16pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>=Fields!apellido1.Value</Value>
+                                  <Style>
+                                    <FontSize>16pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>comercial</rd:DefaultName>
+                          <Top>0.49389cm</Top>
+                          <Left>1.32856cm</Left>
+                          <Height>0.86458cm</Height>
+                          <Width>14.77736cm</Width>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                        <Subreport Name="Subinforme">
+                          <ReportName>ReportCoches</ReportName>
+                          <Parameters>
+                            <Parameter Name="idComercial">
+                              <Value>=Fields!comercial.Value</Value>
+                            </Parameter>
+                          </Parameters>
+                          <Top>2.13431cm</Top>
+                          <Left>1.32856cm</Left>
+                          <Height>2.92569cm</Height>
+                          <Width>14.77736cm</Width>
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Subreport>
+                      </ReportItems>
+                      <KeepTogether>true</KeepTogether>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>#fff7f9</BackgroundColor>
+                      </Style>
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="Detalles" />
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet1</DataSetName>
+        <Height>6.47676cm</Height>
+        <Width>18.52176cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Tablix>
+    </ReportItems>
+    <Height>2.5499in</Height>
+    <Style />
+  </Body>
+  <Width>7.29203in</Width>
+  <Page>
+    <PageHeader>
+      <Height>3.07551cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Image Name="Logo">
+          <Source>Embedded</Source>
+          <Value>car_rental_hotel_icon_141815</Value>
+          <Sizing>FitProportional</Sizing>
+          <Left>1.32856cm</Left>
+          <Height>3.07551cm</Height>
+          <Width>2.98167cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="tbTitulo">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Informe tipo Maestro-Detalle</Value>
+                  <Style>
+                    <FontStyle>Normal</FontStyle>
+                    <FontSize>24pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <Top>0.86995cm</Top>
+          <Left>4.89231cm</Left>
+          <Height>1.28792cm</Height>
+          <Width>11.21361cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+        <BackgroundColor>#def6f4</BackgroundColor>
+      </Style>
+    </PageHeader>
+    <PageFooter>
+      <Height>2.54cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="tbRealizado">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>REALIZADO POR:  MONTSE GARRIDO</Value>
+                  <Style>
+                    <FontSize>16pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <Top>0.59574cm</Top>
+          <Left>1.32856cm</Left>
+          <Height>0.88222cm</Height>
+          <Width>10.57931cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="PageNumber">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Página  </Value>
+                  <Style>
+                    <FontSize>16pt</FontSize>
+                  </Style>
+                </TextRun>
+                <TextRun>
+                  <Value>=Globals!PageNumber</Value>
+                  <Style>
+                    <FontSize>16pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>PageNumber</rd:DefaultName>
+          <Top>0.59574cm</Top>
+          <Left>15.21037cm</Left>
+          <Height>0.88222cm</Height>
+          <Width>3.31139cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+        <BackgroundColor>#def6f4</BackgroundColor>
+      </Style>
+    </PageFooter>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSetMaestroDetalle">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>c612914c-008f-46a5-b556-1b230bc75cce</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>DataSetMaestroDetalle</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="comercial">
+          <DataField>comercial</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nombre">
+          <DataField>nombre</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="apellido1">
+          <DataField>apellido1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="matricula">
+          <DataField>matricula</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="marca">
+          <DataField>marca</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="modelo">
+          <DataField>modelo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="anio">
+          <DataField>anio</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSetMaestroDetalle</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\MateBook\source\repos\InformesSubinforme\InformesSubinforme\DataSetMaestroDetalle.xsd</rd:SchemaPath>
+        <rd:TableName>CochesVendidos</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>CochesVendidosTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <EmbeddedImages>
+    <EmbeddedImage Name="car_rental_hotel_icon_141815">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAMAAADDpiTIAAACSVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADVTbiYAAAAwnRSTlMALZPW9QeW/b6VlNX2+u7auJBXF1LR+P7IbRMO1PSPGnYF05fLGzjmN9LHAfdcW2LkC4DnHB7KBKNlPHvxEmomaM75FUJWbAO2adsn6ygCtWuOQwbQxfOL8hhyyeU1Ngngc4rEDMMNv8BYt29TX2f8
+JM94ChHNJcZkFj1j3O13GTPY7I1VmpnpREWY6sGmI4OEgeh/q6yCcXRQpNdPENlRp3AifH2qqUfewoeJm99a4jTwpYyoTeFZiBSFTksIzJHv3aXPvvQAABTZSURBVHja7Z35Y1XFFccfkLCGsCTwJBBikBgkMUqgLIIQIhJCEMVIGhYFbGQrxYXFlVqsghY3ikKtW7WKtNalttrFbr6/rAlhyZu7zMydmXtm+X5+ZObdOed7vuS8ue8uhQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAo0aPqSiBVCrGjB5FXSdDVI4dR62uG4wbW0ldKyP1H08trDuM99EBE6hVdYkJ1NXSzyj8/ZdgnH/fAyZSa+oWE6nrpZ1J1JK6xSTqemmnilpSt6iirpd2qBV1Dep6wQDEUNcLBiCGul4wADHU9YIBiKGuFwxADHW9YABiqOsFAxBDXS/jBqCOxza818f7BBXxXh/vE1TEe328T1AR7/XxPkFFvNfH+wQV8V4f7xNUxHt9vE9QEe/1EUkw7r6BydVTpk6bXiO0Ru2MmSUeadfdD62vOp51fRgg9b6B4g2z6ngrzJ7Drf4wCdfdX1tfdTzT+jAA776B+rkNqQvMrhasfyn+uvuR66uOZ1gfBuDfN1B/Y2PKAvPE9Y+97r5s/Zs447zPy68fvAGE7huY35R4/FoZ/WOuuy9fv3hz+jjv8/LrB28AsfsGmhckHf8WKQNEr7tn1l/Ykj7O+7z0+sEbQPC+gdZbE47P//5fxiTe+m3p49zPy64fvAGE7xu4Tez4HKp469++KHWc+3nZ9YM3gLB0rTcLHZ9DPffz7XLxSz74gLs+db20o80ApcVLRI7PgfsnuFT1I6n40QI46DNAaekygeNz4H4JK5WWS8WPL4EcNBqgtELg+Onwt2GDW8E7ZOLHNpCDTgM0L+IfPx3+iZhBbmiRiB8ngjjoNEBpJf/4qQicih2iTSJ+nArmoNUAq+7k
+Hj8FoR9jhhi5FeQXCD8GpaLVAKXV3OMnIfpz7GXaxeMfAj8HpyBrgKv/3rimY21UxoXaBYyt1oitoOzxTc93jqwGGKSlo5MdLd6lW8D4/6/LMx8fBpBMMHV8XcQBd+sWMN4A17eCMIAiSgYorGeH5+oWMN4A17eCMIAiagboYi/32qBbwAQDXNsKwgCKqBmg0M0Mb9QtYJIBrm4FYQBFFA3Qwwxv0i1gkgGubgVhAEUUDVDJDM/ULWCiAa5sBWEARfI2QBJSJ4Ius1woftl8Vec7h6IB7mGGuS0gBeFTwcMMbwVhAEUUDbCaGZ7C+3wqgj8GXeHyVhAGUETNAJtnMMP38j6fjtDPwddoE4hfNl/V+c6hZoD72OEtvM+nI3JByHWGtoIwgCJKBri/kx3mngrmIHBJ2AjaYQBlFAyweX2k/vwfgzjwLwodyeBWEAZQJKsBentWPxCtyFbu8Tlwr8svZzkMoIqsAdLp5h6fA/++gDKKd8AAimg1QJ/SJWFDyLWAUmkhDKCIVgP8mH98DnJfAmNQzVd1vnPoNED/Nv7x05HbBsIAGtBpgO0Cx09H7kQQDKABjQbYoXxrmNypYBhAB/oMsLNB5PgpCP0YtJBzENV8Vec7hzYDtD4odPwkRH8OXlCEAbSiywDFtmzHl45vOQygFU0GaG3LeHzp+JrqYQCd6DHAzodMCRj9fDsMoBMtBtjRkPn48vHt2g0DaESDAfr3NGY/fob42mAAjSgboO/hGpXjZ4iv5ScwgD6UDbB1wKiAcZ9P2wqq5qs7futRNkDpkQGV42eKL2UrqJqv7vitR90Apa17DQoY+/mUraBqvrrjtx4NBkh1gBEDpGwFVfPVHb/16DBAmgPMGCB5K6iar+74rUfWAI/Eyp78PcCMAZK3gqr56o7femQNsGif3N8AQwZI3Aqq5qs7fuuRNUBB0gGGDJC4FVTNV3f81iNtAEkHmDJA0lZQNV/d8VuPvAHkHGDMAAlbQdV8
+dcdvPRkMIOWAkiDyD2pshwF0kMUAMg4QNUBJ+lGt8VtB1XxV5ztHJgMUBuJ3g/sVL+qUe1hz7FZQNV/V+c6RzQBJDlC9rFvqce2xW0HVfFXnO0dGAyQ4QPXGDrkXNsRtBVXzVZ3vHFkNkOAA1Vu75F7ZErMVVM1Xdb5zZDZAvANkb+6U/nzZYMxWUDVf1fnOkd0AsXsByfv75T9fPtoOA6jCS5B500LZ/fsxDpC8v5//+YrU8chWMPJ5uePJ6+M8vARTX80a7QKRP+GaXx3LjrfxPi95PGl9nIeXYPrLmSMOiHyJ0/zyaHa8ZSHn85LHk9bHeXgJcl7Pzjgguo3T+/r46PgCzrjs8WT1cR5ugmXv3YueqCl3QHS8ME/GADGfn6A4rjgfBhj53r2YU7WFgf3p47Orxesf93ne+rxxxfkwwPX37sX+WMMfn82+VSSJjMfnjavNhwEKw+/dS/q5VmS8dgZ/L6ByfN64ynwYIHC818f7BBXxXh/vE1TEe328T1AR7/XxPkFFvNfH+wQV8V4f7xNUxHt9vE9QEe/1KQEpqOsFAxBDXS8YgBjqesEAxFDXCwYghrpeMAAx1PWCAYihrhcMQAx1vbRToa5JSHDvI3COSeqihAT3PgLnmKguSkhw7yNwjvLr5EE6/PsI3GOCuizhIHDfgXOMvE4epCNy34F7XLtOHqQjeN+BgwxdJ0+tru3I3HcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAS82BaVM3Vk+mviEjbyZXTzk4d3oNtfrU1M1aSl0JUoo71t9JXQNCmubWq2voOvVbGqjrQETjT/uoxbeDivZe6lpQ0PMAtfD2MH8JdTXy5xD++4+geQF1PfKmG88KKGPmz6grki+HqQW3j9uoa5IntY9Sy20frQF1gcdWUattI4uD+SbY+Di11naydBl1ZXLiCWqlbWUFdWXyoQmn/xLYeYS6NrkwjVpne1lJXZs8qMOT4hJZdZS6
+Ojkwi1plm+mmrk4OxPz+e+zw8UbqsPKm8XjHsagST1KHZZ6aIpt0xVMt1EHR0NLRyWpRfJo6KOMciNT/GeqQ6FgXccB06pCME9kDPEsdESXrWTW2UEdknINs/w/07/8wXfMYOTZQR2Sc55iMD1MHREs3I8cU6oCMc4LJ+Dh1QLT0MHJsog7IOOzXniAvh7tOJSPHTOqAjMN+68lzbZEXVuT9wgZKPUigS1j4lTW5vrIFBsgLmZdW5fjSJhggL6ReW5ffa9tggJyQe3Flfi9uhAFyQvLVtbm9uhUGyAnJl1fn9vJmGCAnquQMUOW7HmRQJSx5HVK973qQgRZghx5kUCWML4GWQJUwtoGWQJYwTgTZAVnCOBVsB3QJ48cgK6BMGD8HW0BwCUOPwBOGHoEnDD0CTxh6BJ4w9Ag8YegReMLQI/CEoUfgCUOPwBOGHoEnDD0CTxh6BJ4w9Ag8YegReMLQI/CEoUfgCUOPwBOGHoEnDD0CTxh6BJ4w9Ag8YegReMLQI/CEoUfgCUOPwBOGHoEnDD0CTxh6BJ4w9Ag8YegReMLQI/CEg9Oj5sC0qRurJ5cEoQ6XGlGdJldPmTpteg11uDzqZi0VzQgGuIycWsUbZtVRR5xC01z5F4NTx0yNtGD1cxuoY06g94ks74WnjpqaDJLV32jli3Z7HsiQCwyQSbT5TdRhRznUlykVGCATzQuo42bplnoSKwxwjYyytd5KHXg5hzPmAQNkFu426shHUvsoDJCRzMK13kwd+nUeW5U5DRggM4uXUMd+lcbHs2cBA2Rn6TLq4K/whEISMIACK6iDH6Ypy/kfGOAKKto1L6KO/jLTVHKAAVRYSR39EHWS7+OCAcpQEm/VndThDzJLKQUYQInV1OEPEvP777HDxxN/roABsunRuKZjbVTphdThFwo1RTaoiqdaNCQcChJ6tHR0srOLd1HHXzgQqf8zuhIOAik91kUccDd1/NE9wLMaEw4AOT3Ws9PnUsdf
+OMj2/5b0+TCAih5dc5jpG6jjLzzHRHRYa8L+I6lHNzN9I3X8hRNMRMf1Juw9knr0MNM3UcdfYL+W9OpN2Hsk9ahkps+kjh8GUMR5A7AtYI3ehL1HUo97rGsB7JfADr0Je4+kHquZ6VOo4y9MZSJai22gFHJ6bJ7BTL+XOv7oiaAOnQn7j5we97HTt1DHX5jOhtS5TmPC/iOlx/2d7HT6U8HRH4M613fpSjgAJPTYvD5Sfwt+DCrsKEWY091TqSHhIBDVo7dndcy9d1upwy/gghBF1NTroA5/kDqla0JhABX6bLgkrDAXBlBASbyHqaO/TAMuC1dARbv+bdTRD/NzGCA7Ktptpw7+Co3zYYDMKEi3w5ZbwwrP3w4DZCW7cs3W3BxaKPwi+80h1KFTk1m4VqseEnJrdiODTBTbqGvOOKCVWpGwaLWs/oXCgmZqTUJi50PU9Y7SJPuMUJCZHVY+K3LZip3UwoRB/x4rHxQ5yJGVCg8LAmL0PWzzE6OPrl5YVM8RJFF8svsodY153HX3loMnT3RSS+UbnS+c3PDLFy24/kORl6iFtJ1T1BUyy7LT1ALbziZrTvAb4WVqfe3nZeoaGQUdgIvXPQAdgI/XPeAVanVdwOcegA4ggMc9AB1ABI97QKQD/Io6Ihs4xaribw+IdID7qSOygcjW2NseEOkAHv+xk6ArGFnQAeIJpgegA8QTSg9AB0gglB6ADpBEID0AHSCJMHoAOkAiYfQAdIBkgugB6ADJhNAD0AFSCKEHoAOkEUAPQAdIw/8egA6Qiv89AB0gHe97ADpAOr73AHQADr73AHQAHp73AHQAHn73AHQALn73AHQAPl73AHQAPj73AHQAAXzuAegAInjcA9ABRPC3B6ADCOFvD0AHEMPbHoAOIIavPQAdQBBfewA6gCie9gB0AFH87AHoAML42QPQAcTxsgegA4jjYw9AB5DAxx6ADiCDhz3gJv9SMkikB9xEHZEyk5iMzrj/R80g
+y84wck2ijkiZKnQAGdgeUEUdkDKlFOpPvvrantf1rzlq9Jjsb7JMoGLM6FH6I319z2uvnkx9+bb5ChmGL+28N/S+BKdy7Djd1R9m3NhKrYFue3MOf9E8a2UEEWX72gf0LVg53kz5hxiv0QF7z9aLLJl/xTQjpuyvD2lbcIK5+pdKE7SF+aLgc5MpaqYVQWWL51r0rDfK0N//YcZp+h7Qclb05Wp0ldOEsLZv7dKy3kST9S+VJmoJ8sjbwgtS1k4L4tq+peVvwCTxBbOgZV/eIl7/kAxQOqdjvSqJBTOgZV9+XmJB2uppQCLXYm2+62VCQ4gvyrxclbp+uRbk9N5816MxwMDinA1Hi5S6GpqA/QaQaQChGaBvW77rURjg6X4YIJnzOa9HYIA3c16PGrl0b8l5PQIDSO5TqeuXd0GO57xe7gZ4LG/DUSOZ74Wc18vdAL8J3QAjx/a+c5Id/q3J9Ww43mvsAd99r2zzG5QBCoX3P2CGx5tdj/54+9j6v292PXI4CX3IDJ80vB758VjHv2d4PXI4Cc1mhvsNr0d+PPYsAHvyEwYwux758WCAcmpDbwHvGF6PnPSEjk5hhr3/ErifdXzIXwJn17L1938b+Dv2gB98GNY2kMNHOa8njWp823NejxzJfD/Oeb3cDfA6DJDGjJzXy98ABYGbQQI2wNmc1yMwwBswQDJ96jeJWW8AXBCSwu9zXo/CAIV2GCCJ5kX5rkdjAFwUmkTxw3zXIzJA4RAuC4/nEx3raX8wQDn1OmJshwHi+DScW8PeggGiXAzo5tBdn8IADMVPwro9/BxuDy+j+R31la7gyAMiagX3AhQ104pIkv2faNj/XcWVR8QMnOuDAS4z4+zTWld05iFRNedvCdwAfe/uW/6R8u9/Udx5TNzHF5bvezf1L4H5ChnGu4QM451e3iVkGO/08i4hw3inl3cJGcY7vbxLyDDe6eVdQobxTi/vEjKMd3p5l5BhvNPLu4QM451e3iVk
+GO/08i4hw3inl3cJGcY7vbxLyDDe6eVdQobxTi/vEjKMd3p5l5BhvNDLxAUZoWPmghQjGLskK3R0X5Jmqv4GL8oMHZ0XpRrD6GXZoaPvsnRjmL0xI3R03ZhiEMO3ZoWOnlvTTGL45szQ0XJzqlEMv7cvdLS8t9Ao1Ar5DnV9YQBiqOsLAxBDXV8YgBjq+sIAxFDXFwYghrq+MAAx1PWFAYihrq+0AajjcR3n9HQuYMtxTk/nArYc5/R0LmDLcU5P5wK2HOf0dC5gy3FOT+cCthzn9HQuYMtxTk/nArYc5/R0LmDLcU5P5wK2HOf0dC5gy3FOT+cCthzn9HQuYMtxTk/nArYc5/R0LmDLcU7PEjAKdX1hAGKo6wsDEENdXxiAGOr6wgDEUNcXBiCGur4wADHU9YUBiKGuLxc8INAo9dT15YJHxBjF/kfE4CFRRrH/IVF4TJxJHHhMHB4UaRIHHhSJR8UaxIlHxeJh0aZw5GHRBTwu3gQOPS6+HDYR1XmuEqwOwSYOHQJPHDoEnjh0CDxx6BB44tAh8MShQ+CJQ4fAE4cOgScOHQJPHDoEnjh0CDxx6BB44tAh8MShQ+CJQ4fAE4cOgScOHQJPHDoEnjh0GKaTSagxflolM20mddzQQRMvMBk1xE9bwkzbRB03dNDEbiajV+KnfcZMu0QdN3TQxB+YjP4YP+1zZtp+6rihgyb+xGT0RVfcrC72P8gp6rihgya2MxmVDsTN+pKd9RF13NBBEw+xKe0eiE7a+xU762vquKGDJrr+zOb0TQs7p+UiO6e6K8taNhOuDm+zSZX+wmTesiUy5SJ11NBBG+9Fsip9U/bXb+9fozO+pY4aOmijd1M0r+/+tvnq8OYvv4qOn2lUWdFOwtXhfCmG3X//bElv75LPPt8dN9pOHTN00EhdX0mSvn9QxwwddPJP2cTPUkcMHbRy5JJc3t8too4YOujle7nE/0UdL3TQzViZvEdTRwsdtPPvteJ5/8eV
+Z6FBBwkavhDN+9Lz1LFCBxP0nBbL+/Qa6kihgxk+fk4k7y96qOOEDqZoOMbPe75nf/egw0gq/8vL+5RX33ugQ4RvU78CXfJo3wsd4jnyRn9S2v1nd1FHBx1y4M6zm+LSPnPuKHVk0CEnGr//9H/lWVdf/NaL372hgyhdD154af8PJzo7T/yw/9SFrz247g06AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgf/4PyYFRIoRD2gcAAAAASUVORK5CYII=</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>1b7fb982-5ae0-4c63-a849-9344455ec20b</rd:ReportID>
+</Report>
